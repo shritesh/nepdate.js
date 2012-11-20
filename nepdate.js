@@ -319,6 +319,9 @@ function Nepdate()
     	 */
     	if (check_ad_range(ad_date))
     	{
+
+               for(var i=0; i<ad_date.length;i++) ad_date[i] = parseInt(ad_date[i]);
+
     		var delta = count_ad_days(ad_equiv,ad_date);
     		var bs_date = add_bs_days(bs_equiv,delta);
     		return bs_date;
@@ -340,6 +343,9 @@ function Nepdate()
     	 */
     	if (check_bs_range(bs_date))
     	{
+
+               for(var i=0; i<bs_date.length;i++) bs_date[i] = parseInt(bs_date[i]);
+
     		var delta = count_bs_days(bs_equiv,bs_date);
     		var ad_date = add_ad_days(ad_equiv,delta);
     		return ad_date;
